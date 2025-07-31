@@ -120,6 +120,8 @@
                         } else {
                             entry.target.style.backgroundImage = "url(" + src + ")";
                         }
+
+                        entry.target.classList.add("lazyloaded");
                     }
                 });
             }, observerConfig);
@@ -145,6 +147,7 @@
                 if ("img" === image.tagName.toLowerCase()) {
                     if (src) {
                         image.src = src;
+                        image.classList.add("lazyloaded");
                     }
                     if (srcset) {
                         image.srcset = srcset;
@@ -152,6 +155,8 @@
                 } else {
                     image.style.backgroundImage = "url('" + src + "')";
                 }
+
+                image.classList.add("lazyloaded");
             });
         },
 
