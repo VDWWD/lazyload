@@ -35,7 +35,7 @@ let images = document.querySelectorAll(".branwdo");
 new LazyLoad(images);
 ```
 
-The core IntersectionObserver can be configured by passing an additional argument
+The core IntersectionObserver can be configured by passing an additional argument. Note that you can specify a root margin for each position: rootMargin: "0px 20px 0px 40px". These values can also be negative and will cause the image to be lazyloaded when it is in the viewport plus that margin.
 
 ```js
 new LazyLoad(images, {
